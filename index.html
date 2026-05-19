@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio – Parisz</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<nav id="navbar">
+  <div class="logo">PARI<span>SZ</span></div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About Me</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle Dark Mode" onclick="toggleTheme()">
+      <i class="fas fa-moon" id="themeIcon"></i>
+    </button>
+    <a href="assets/Muhamad Parisz Hidayat - Student - CV (1).pdf" class="btn-cv" target="_blank">
+      <i class="fas fa-download"></i> Download CV
+    </a>
+  </div>
+  <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section id="home">
+  <div class="hero-container">
+    <div class="hero-text">
+      <p class="hero-greeting"><span id="greeting-word">Hi</span>, i am</p>
+      <p class="hero-name">Muhamad Parisz Hidayat</p>
+      <h1 class="hero-title">Software<br><span class="highlight">Developer</span></h1>
+      <p class="hero-desc">I build scalable and efficient web applications with clean architecture and modern technologies. Passionate about solving real-world problems through code and continuously improving my skills in software development.</p>
+      <div class="hero-btns">
+        <a href="#contact" class="btn-primary">Hire Me</a>
+        <a href="#projects" class="btn-outline">View Projects</a>
+      </div>
+      <div class="stats-bar">
+        <div class="stat-item">
+          <div class="stat-num" data-count="2">0</div>
+          <div class="stat-label">Years Experience</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num" data-count="30">0</div>
+          <div class="stat-label">Projects Done</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num" data-count="1">0</div>
+          <div class="stat-label">Happy Clients</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-image-wrap">
+      <div class="avatar-ring">
+        <div class="avatar-placeholder">
+          <img src="assets/mantap.png" alt="">
+        </div>
+      </div>
+      <div class="social-icons">
+        <a href="https://dribbble.com/parisz" aria-label="Dribble" target="_blank"><i class="fab fa-dribbble"></i></a>
+        <a href="https://github.com/Parisz08" aria-label="Github" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.instagram.com/pariszkelilingbumi/" aria-label="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/muhamad-parisz-2a59ab33a/" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section id="about">
+  <div class="about-grid">
+    <div class="about-img-wrap reveal">
+      <div class="about-card"><img src="assets/vs-code-svgrepo-com.svg" alt=""></div>
+      <div class="about-badge"><span>2+</span> Years of Experience</div>
+    </div>
+    <div class="about-text reveal">
+      <p class="section-tag">About Me</p>
+      <h2 class="section-title">Future Software Engineer in the Making</h2>
+      <p>I am a Software Developer student at IDN Boarding School Sentul, passionate about web development and system architecture.</p>
+      <p>I enjoy turning ideas into functional applications while continuously improving my coding skills and understanding of modern technologies.</p>
+      <div class="skills-tags">
+        <span class="tag">Next.JS</span>
+        <span class="tag">Node.js</span>
+        <span class="tag">Laravel</span>
+        <span class="tag">Tailwind</span>
+        <span class="tag">Flutter</span>
+        <span class="tag">MySQL</span>
+        <span class="tag">Github</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section id="services">
+  <div class="services-header reveal">
+    <p class="section-tag">What I Develop</p>
+    <h2 class="section-title">My Expertise</h2>
+  </div>
+  <div class="services-grid">
+    <div class="service-card reveal">
+      <div class="service-icon"><img src="assets/laravel-svgrepo-com.svg" alt=""></div>
+      <h3>Full-Stack Web Development</h3>
+      <p>Building scalable and modern web applications using Next.js, Laravel, and Node.js with clean architecture and optimized performance.</p>
+    </div>
+    <div class="service-card reveal">
+      <div class="service-icon"><img src="assets/node-js-svgrepo-com.svg" alt=""></div>
+      <h3>Backend & API Development</h3>
+      <p>Designing secure and efficient RESTful APIs, handling authentication, business logic, and server-side processes using Laravel and Node.js.</p>
+    </div>
+    <div class="service-card reveal">
+      <div class="service-icon"><img src="assets/next-js-svgrepo-com.svg" alt=""></div>
+      <h3>Frontend Engineering</h3>
+      <p>Creating responsive and interactive user interfaces with Next.js, JavaScript, HTML, and CSS, ensuring performance and accessibility.</p>
+    </div>
+    <div class="service-card reveal">
+      <div class="service-icon"><img src="assets/flutter-svgrepo-com.svg" alt=""></div>
+      <h3>Mobile App Development</h3>
+      <p>Developing cross-platform mobile applications using Flutter, focusing on performance, usability, and clean UI implementation.</p>
+    </div>
+    <div class="service-card reveal">
+      <div class="service-icon"><img src="assets/sql-svgrepo-com.svg" alt=""></div>
+      <h3>Database Design & Management</h3>
+      <p>Designing relational databases using MySQL, including data modeling, query optimization, and structured data management.</p>
+    </div>
+    <div class="service-card reveal">
+      <div class="service-icon"><img src="assets/code-svgrepo-com.svg" alt=""></div>
+      <h3>System & Application Architecture</h3>
+      <p>Building structured systems such as payroll and attendance applications with proper logic flow, modular code, and scalable design principles.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROJECTS ===== -->
+<section id="projects">
+  <div class="proj-inner">
+
+    <div class="proj-head reveal">
+      <div>
+        <p class="section-tag">My Work</p>
+        <h2 class="section-title">Recent Projects</h2>
+      </div>
+      <a href="https://github.com/Parisz08" target="_blank" class="proj-github-link">
+        <i class="fab fa-github"></i> View All
+      </a>
+    </div>
+
+    <div class="proj-masonry">
+
+      <!-- Card 1 — TALL (featured) -->
+      <div class="proj-mcard proj-mcard--tall reveal">
+        <div class="proj-mcard-thumb" style="background: linear-gradient(145deg, #fff4ef 0%, #ffd5c2 100%);">
+          <img src="assets/user-check.png" alt="Hadirin">
+          <div class="proj-mcard-num">01</div>
+        </div>
+        <div class="proj-mcard-body">
+          <div class="proj-mcard-top">
+            <span class="proj-mcard-tag">Attendance App</span>
+            <div class="proj-mcard-techs">
+              <img src="assets/node-js-svgrepo-com.svg" title="Node.js">
+              <img src="assets/sql-svgrepo-com.svg" title="MySQL">
+            </div>
+          </div>
+          <h3>Hadirin</h3>
+          <p>A digital-based attendance management application designed to simplify real-time attendance recording. It enables more efficient and organized user data management and attendance reporting.</p>
+          <a href="https://github.com/Parisz08/attendance-app" target="_blank" class="proj-mcard-link">
+            View Project <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right column: 2 stacked cards -->
+      <div class="proj-mcard-col">
+
+        <!-- Card 2 — SHORT -->
+        <div class="proj-mcard proj-mcard--short reveal">
+          <div class="proj-mcard-thumb" style="background: linear-gradient(145deg, #ebf4ff 0%, #bee3f8 100%);">
+            <img src="assets/news.png" alt="kabarInd">
+            <div class="proj-mcard-num">02</div>
+          </div>
+          <div class="proj-mcard-body">
+            <div class="proj-mcard-top">
+              <span class="proj-mcard-tag" style="color:#4299e1;background:rgba(66,153,225,0.08);border-color:rgba(66,153,225,0.2);">News App</span>
+              <div class="proj-mcard-techs">
+                <img src="assets/flutter-svgrepo-com.svg" title="Flutter">
+                <img src="assets/code-svgrepo-com.svg" title="Dart">
+              </div>
+            </div>
+            <h3>kabarInd</h3>
+            <p>A Flutter-based news application that integrates with a public News API to display real-time articles. The project demonstrates API integration, dynamic data fetching, and responsive mobile UI development.</p>
+            <a href="https://github.com/Parisz08/news-API-flutter" target="_blank" class="proj-mcard-link">
+              View Project <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 3 — SHORT -->
+        <div class="proj-mcard proj-mcard--short reveal">
+          <div class="proj-mcard-thumb" style="background: linear-gradient(145deg, #f0fff4 0%, #c6f6d5 100%);">
+            <img src="assets/koran.png" alt="Quran App">
+            <div class="proj-mcard-num">03</div>
+          </div>
+          <div class="proj-mcard-body">
+            <div class="proj-mcard-top">
+              <span class="proj-mcard-tag" style="color:#38a169;background:rgba(56,161,105,0.08);border-color:rgba(56,161,105,0.2);">Quran App</span>
+              <div class="proj-mcard-techs">
+                <img src="assets/flutter-svgrepo-com.svg" title="Flutter">
+                <img src="assets/code-svgrepo-com.svg" title="Dart">
+              </div>
+            </div>
+            <h3>Quran-App</h3>
+            <p>A Flutter-based Quran mobile application that enables users to read and navigate Quran chapters with a clean and responsive interface.</p>
+            <a href="https://github.com/Parisz08/quran-app" target="_blank" class="proj-mcard-link">
+              View Project <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+      </div><!-- end col -->
+    </div><!-- end masonry -->
+  </div>
+</section>
+
+<!-- ===== EXPERIENCE ===== -->
+<section id="experience">
+  <div class="exp-wrap">
+    <div class="exp-header reveal">
+      <p class="section-tag">My Journey</p>
+      <h2 class="section-title">Experience &amp; Education</h2>
+      <p class="exp-subtitle">A record of what I've Do, learned, and the tools I've mastered along the way.</p>
+    </div>
+    <div class="exp-body">
+      <div class="exp-left">
+        <div class="exp-block reveal">
+          <div class="exp-block-label">
+            <span class="exp-block-icon"><i class="fas fa-briefcase"></i></span>
+            Experience
+          </div>
+          <div class="exp-item">
+            <div class="exp-line-dot"></div>
+            <div class="exp-card">
+              <div class="exp-card-head">
+                <div>
+                  <h3>Backpacker 20 Country</h3>
+                  <p class="exp-place"><i class="fas fa-building"></i> IDN Backpacker School Sentul</p>
+                </div>
+                <span class="exp-badge">2025 – 2026</span>
+              </div>
+              <p class="exp-desc">Participated in the IDN Backpacker Program, exploring cultures and experiences across 20 countries.</p>
+              <!-- <div class="exp-techs">
+                <span><img src="assets/next-js-svgrepo-com.svg" alt="">Next.js</span>
+                <span><img src="assets/laravel-svgrepo-com.svg" alt="">Laravel</span>
+                <span><img src="assets/flutter-svgrepo-com.svg" alt="">Flutter</span>
+              </div> -->
+            </div>
+          </div>
+          <div class="exp-item">
+            <div class="exp-line-dot"></div>
+            <div class="exp-card">
+              <div class="exp-card-head">
+                <div>
+                  <h3>IT Trainer</h3>
+                  <p class="exp-place"><i class="fas fa-building"></i> SMK 10 Jakarta Timur</p>
+                </div>
+                <span class="exp-badge">2025</span>
+              </div>
+              <p class="exp-desc">Delivered a 1-day introductory web development training (HTML, CSS, JavaScript) for one high school class. .</p>
+              <!-- <div class="exp-techs">
+                <span><img src="assets/node-js-svgrepo-com.svg" alt="">Node.js</span>
+                <span><img src="assets/sql-svgrepo-com.svg" alt="">MySQL</span>
+                <span><img src="assets/code-svgrepo-com.svg" alt="">REST API</span>
+              </div> -->
+            </div>
+          </div>
+          <div class="exp-item">
+            <div class="exp-line-dot"></div>
+            <div class="exp-card">
+              <div class="exp-card-head">
+                <div>
+                  <h3>IT Trainer</h3>
+                  <p class="exp-place"><i class="fas fa-building"></i>SMA 8 Kota Serang</p>
+                </div>
+                <span class="exp-badge">2025</span>
+              </div>
+              <p class="exp-desc">Taught HTML, CSS, and JavaScript fundamentals to two high school classes in a 3-day training program.</p>
+              <!-- <div class="exp-techs">
+                <span><img src="assets/flutter-svgrepo-com.svg" alt="">Flutter</span>
+                <span><img src="assets/code-svgrepo-com.svg" alt="">Dart</span>
+                <span><img src="assets/node-js-svgrepo-com.svg" alt="">API Integration</span>
+              </div> -->
+            </div>
+          </div>
+        </div>
+        <div class="exp-block reveal">
+          <div class="exp-block-label">
+            <span class="exp-block-icon exp-block-icon--edu"><i class="fas fa-graduation-cap"></i></span>
+            Education
+          </div>
+          <div class="exp-item">
+            <div class="exp-line-dot exp-line-dot--edu"></div>
+            <div class="exp-card">
+              <div class="exp-card-head">
+                <div>
+                  <h3>Software Developer Program</h3>
+                  <p class="exp-place"><i class="fas fa-school"></i> IDN Boarding School Sentul</p>
+                </div>
+                <span class="exp-badge exp-badge--edu">2023 – Present</span>
+              </div>
+              <p class="exp-desc">Intensive program covering web dev, mobile apps, databases, and system architecture. Real-world projects are core to the curriculum.</p>
+              <div class="exp-techs">
+                <span><img src="assets/code-svgrepo-com.svg" alt="">Web Dev</span>
+                <span><img src="assets/flutter-svgrepo-com.svg" alt="">Mobile Dev</span>
+                <span><img src="assets/sql-svgrepo-com.svg" alt="">System Design</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="exp-right">
+        <div class="exp-skills-card reveal">
+          <h4 class="exp-card-title"><i class="fas fa-code"></i> Tech Stack</h4>
+          <div class="exp-skill-rows" id="skillRows">
+            <div class="exp-skill-row">
+              <div class="exp-skill-meta"><img src="assets/next-js-svgrepo-com.svg" alt="Next.js"><span>Next.js</span></div>
+              <div class="exp-skill-track"><div class="exp-skill-fill" data-width="85"></div></div>
+              <span class="exp-skill-pct">85%</span>
+            </div>
+            <div class="exp-skill-row">
+              <div class="exp-skill-meta"><img src="assets/laravel-svgrepo-com.svg" alt="Laravel"><span>Laravel</span></div>
+              <div class="exp-skill-track"><div class="exp-skill-fill" data-width="80"></div></div>
+              <span class="exp-skill-pct">80%</span>
+            </div>
+            <div class="exp-skill-row">
+              <div class="exp-skill-meta"><img src="assets/node-js-svgrepo-com.svg" alt="Node.js"><span>Node.js</span></div>
+              <div class="exp-skill-track"><div class="exp-skill-fill" data-width="78"></div></div>
+              <span class="exp-skill-pct">78%</span>
+            </div>
+            <div class="exp-skill-row">
+              <div class="exp-skill-meta"><img src="assets/flutter-svgrepo-com.svg" alt="Flutter"><span>Flutter</span></div>
+              <div class="exp-skill-track"><div class="exp-skill-fill" data-width="72"></div></div>
+              <span class="exp-skill-pct">72%</span>
+            </div>
+            <div class="exp-skill-row">
+              <div class="exp-skill-meta"><img src="assets/sql-svgrepo-com.svg" alt="MySQL"><span>MySQL</span></div>
+              <div class="exp-skill-track"><div class="exp-skill-fill" data-width="75"></div></div>
+              <span class="exp-skill-pct">75%</span>
+            </div>
+          </div>
+        </div>
+        <div class="exp-highlights-card reveal">
+          <h4 class="exp-card-title"><i class="fas fa-star"></i> Certificates</h4>
+          <div class="exp-highlights">
+            <div class="exp-highlight-item">
+              <div class="exp-hi-icon">🏆</div>
+              <div><div class="exp-hi-name">SQL Intermediate</div><div class="exp-hi-sub">HackerRank</div></div>
+            </div>
+            <div class="exp-highlight-item">
+              <div class="exp-hi-icon">🚀</div>
+              <div><div class="exp-hi-name">Rest API</div><div class="exp-hi-sub">HackerRank</div></div>
+            </div>
+            <div class="exp-highlight-item">
+              <div class="exp-hi-icon">📱</div>
+              <div><div class="exp-hi-name">Basic Javascript Back-End</div><div class="exp-hi-sub">Dicoding</div></div>
+            </div>
+            <div class="exp-highlight-item">
+              <div class="exp-hi-icon">🔧</div>
+              <div><div class="exp-hi-name">Basic Cloud & Gen AI AWS</div><div class="exp-hi-sub">Dicoding</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact">
+  <div class="contact-wrap">
+    <div class="reveal">
+      <p class="section-tag">Get In Touch</p>
+      <h2 class="section-title">Let's Work Together</h2>
+      <p>Have a project in mind? I'd love to help bring your vision to life. Send me a message and let's create something amazing together.</p>
+    </div>
+
+    <!-- Success overlay (hidden by default) -->
+    <div class="contact-success" id="contactSuccess">
+      <div class="contact-success-inner">
+        <div class="success-icon">
+          <svg width="80" height="80" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle class="success-circle" cx="26" cy="26" r="24" stroke="#FF6B2B" stroke-width="2.5"/>
+            <path class="success-check" d="M14 26l9 9 15-17" stroke="#FF6B2B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3>Message Sent!</h3>
+        <p>Thank you for reaching out. I'll get back to you as soon as possible.</p>
+        <button class="btn-success-back" onclick="resetContactForm()">Send Another Message</button>
+      </div>
+    </div>
+
+    <form class="contact-form reveal" id="contactForm" onsubmit="handleSubmit(event)" novalidate>
+      <div class="form-field">
+        <label for="name">Your Name</label>
+        <input id="name" name="from_name" type="text" placeholder="John Doe" required />
+      </div>
+      <div class="form-field">
+        <label for="email">Email Address</label>
+        <input id="email" name="from_email" type="email" placeholder="john@example.com" required />
+      </div>
+      <div class="form-field">
+        <label for="phone">Phone Number</label>
+        <input id="phone" name="from_phone" type="tel" placeholder="+62 800 0000 0000" />
+      </div>
+      <div class="form-field">
+        <label for="subject">Subject</label>
+        <input id="subject" name="subject" type="text" placeholder="Project Inquiry" />
+      </div>
+      <div class="form-field full">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Tell me about your project..."></textarea>
+      </div>
+      <div class="form-submit">
+        <button type="submit" class="btn-submit" id="submitBtn">
+          <span class="btn-submit-text">
+            Send Message <i class="fas fa-paper-plane" style="margin-left:8px"></i>
+          </span>
+          <span class="btn-submit-loading" style="display:none">
+            <i class="fas fa-circle-notch fa-spin"></i> Sending...
+          </span>
+        </button>
+        <p class="form-error" id="formError" style="display:none">
+          <i class="fas fa-exclamation-circle"></i> Something went wrong. Please try again.
+        </p>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footer-logo">PARI<span>SZ</span></div>
+  <p>© 2026 Parisz. All rights reserved.</p>
+  <div class="footer-socials">
+    <a href="https://dribbble.com/parisz" aria-label="Dribble" target="_blank"><i class="fab fa-dribbble"></i></a>
+    <a href="https://github.com/Parisz08" aria-label="Github" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="https://www.instagram.com/pariszkelilingbumi/" aria-label="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.linkedin.com/in/muhamad-parisz-2a59ab33a/" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
