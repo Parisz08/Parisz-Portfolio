@@ -6,7 +6,7 @@
 // 3. Cek inbox → copy Access Key
 // 4. Paste di bawah ini
 // =============================================
-const WEB3FORMS_ACCESS_KEY = '4d884818-ade5-45bc-b3d9-aedbaddf63ed'; // ← ganti
+const WEB3FORMS_ACCESS_KEY = 'YOUR_ACCESS_KEY_HERE'; // ← ganti
 // =============================================
 
 // ===== NAVBAR SCROLL =====
@@ -16,23 +16,35 @@ window.addEventListener('scroll', () => {
 
 // ===== MOBILE MENU =====
 function toggleMenu() {
-  const links = document.getElementById('navLinks');
-  const isOpen = links.style.display === 'flex';
+  const links     = document.getElementById('navLinks');
+  const hamburger = document.getElementById('hamburger');
+  const isOpen    = links.classList.contains('open');
+
   if (isOpen) {
-    links.style.display = 'none';
+    links.classList.remove('open');
+    hamburger.classList.remove('active');
   } else {
-    Object.assign(links.style, {
-      display: 'flex', flexDirection: 'column',
-      position: 'fixed', top: '70px', left: '0', right: '0',
-      background: '#fff', padding: '20px 28px 30px',
-      boxShadow: '0 8px 30px rgba(0,0,0,0.1)', gap: '18px', zIndex: '99'
-    });
+    links.classList.add('open');
+    hamburger.classList.add('active');
   }
 }
+
+// Close menu on link click
 document.querySelectorAll('.nav-links a').forEach(link => {
   link.addEventListener('click', () => {
-    if (window.innerWidth < 900) document.getElementById('navLinks').style.display = 'none';
+    document.getElementById('navLinks').classList.remove('open');
+    document.getElementById('hamburger').classList.remove('active');
   });
+});
+
+// Close menu on outside click
+document.addEventListener('click', (e) => {
+  const nav  = document.getElementById('navbar');
+  const menu = document.getElementById('navLinks');
+  if (!nav.contains(e.target) && menu.classList.contains('open')) {
+    menu.classList.remove('open');
+    document.getElementById('hamburger').classList.remove('active');
+  }
 });
 
 // ===== SCROLL REVEAL =====
@@ -165,6 +177,47 @@ function resetContactForm() {
 
 async function handleSubmit(e) {
   e.preventDefault();
+
+  // Validate all required fields
+  const fields = [
+    { id: 'name',    hint: 'nameHint',    type: 'text'  },
+    { id: 'email',   hint: 'emailHint',   type: 'email' },
+    { id: 'phone',   hint: 'phoneHint',   type: 'text'  },
+    { id: 'subject', hint: 'subjectHint', type: 'text'  },
+    { id: 'message', hint: 'messageHint', type: 'text'  },
+  ];
+
+  let firstInvalid = null;
+
+  fields.forEach(({ id, hint, type }) => {
+    const el     = document.getElementById(id);
+    const hintEl = document.getElementById(hint);
+    let valid    = el.value.trim() !== '';
+
+    // Extra check for email format
+    if (type === 'email' && valid) {
+      valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(el.value.trim());
+    }
+
+    if (!valid) {
+      el.classList.add('invalid');
+      hintEl.style.display = 'flex';
+      if (!firstInvalid) firstInvalid = el;
+      el.addEventListener('input', () => {
+        el.classList.remove('invalid');
+        hintEl.style.display = 'none';
+      }, { once: true });
+    } else {
+      el.classList.remove('invalid');
+      hintEl.style.display = 'none';
+    }
+  });
+
+  if (firstInvalid) {
+    firstInvalid.focus();
+    return;
+  }
+
   showError(false);
   setButtonState(true);
 
@@ -178,6 +231,9 @@ async function handleSubmit(e) {
     botcheck:   '',
   };
 
+  // Debug: cek payload sebelum kirim
+  console.log('📤 Sending to Web3Forms...', payload);
+
   try {
     const res  = await fetch('https://api.web3forms.com/submit', {
       method:  'POST',
@@ -185,14 +241,17 @@ async function handleSubmit(e) {
       body:    JSON.stringify(payload),
     });
     const data = await res.json();
+    console.log('📬 Web3Forms response:', data);
+
     if (data.success) {
       setButtonState(false);
       showSuccess();
     } else {
+      console.error('❌ Web3Forms rejected:', data.message);
       throw new Error(data.message);
     }
   } catch (err) {
-    console.error('Web3Forms error:', err);
+    console.error('❌ Web3Forms error:', err);
     setButtonState(false);
     showError(true);
   }

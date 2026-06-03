@@ -22,7 +22,7 @@
     <li><a href="#contact">Contact</a></li>
     <!-- CV button inside mobile menu only -->
     <li class="nav-cv-mobile">
-      <a href="assets/Muhamad Parisz Hidayat - Student - CV (1).pdf" target="_blank" class="btn-cv-mobile">
+      <a href="assets/cv.pdf" target="_blank" class="btn-cv-mobile">
         <i class="fas fa-download"></i> Download CV
       </a>
     </li>
@@ -31,7 +31,7 @@
     <button class="theme-toggle" id="themeToggle" aria-label="Toggle Dark Mode" onclick="toggleTheme()">
       <i class="fas fa-moon" id="themeIcon"></i>
     </button>
-    <a href="assets/Muhamad Parisz Hidayat - Student - CV (1).pdf" class="btn-cv" target="_blank">
+    <a href="assets/cv.pdf" class="btn-cv" target="_blank">
       <i class="fas fa-download"></i> Download CV
     </a>
   </div>
@@ -162,79 +162,181 @@
       </a>
     </div>
 
-    <div class="proj-masonry">
+    <!-- Horizontal timeline -->
+    <div class="proj-htl">
 
-      <!-- Card 1 — TALL (featured) -->
-      <div class="proj-mcard proj-mcard--tall reveal">
-        <div class="proj-mcard-thumb" style="background: linear-gradient(145deg, #fff4ef 0%, #ffd5c2 100%);">
-          <img src="assets/user-check.png" alt="Hadirin">
-          <div class="proj-mcard-num">01</div>
-        </div>
-        <div class="proj-mcard-body">
-          <div class="proj-mcard-top">
-            <span class="proj-mcard-tag">Attendance App</span>
-            <div class="proj-mcard-techs">
-              <img src="assets/node-js-svgrepo-com.svg" title="Node.js">
-              <img src="assets/sql-svgrepo-com.svg" title="MySQL">
-            </div>
+      <!-- Top row: card 01 + card 03 -->
+      <div class="proj-htl-top">
+
+        <!-- Card 01 — TOP -->
+        <div class="proj-htl-card reveal">
+          <div class="proj-htl-thumb" style="background: linear-gradient(145deg, #fff4ef, #ffd5c2);">
+            <img src="assets/user-check.png" alt="Hadirin">
+            <span class="proj-htl-num">01</span>
           </div>
-          <h3>Hadirin</h3>
-          <p>A modern real-time attendance management app. Built with Node.js, MySQL and a clean REST API — handling recording and monitoring with structured architecture.</p>
-          <a href="https://github.com/Parisz08/attendance-app" target="_blank" class="proj-mcard-link">
-            View Project <i class="fas fa-arrow-right"></i>
-          </a>
-        </div>
-      </div>
-
-      <!-- Right column: 2 stacked cards -->
-      <div class="proj-mcard-col">
-
-        <!-- Card 2 — SHORT -->
-        <div class="proj-mcard proj-mcard--short reveal">
-          <div class="proj-mcard-thumb" style="background: linear-gradient(145deg, #ebf4ff 0%, #bee3f8 100%);">
-            <img src="assets/news.png" alt="kabarInd">
-            <div class="proj-mcard-num">02</div>
-          </div>
-          <div class="proj-mcard-body">
-            <div class="proj-mcard-top">
-              <span class="proj-mcard-tag" style="color:#4299e1;background:rgba(66,153,225,0.08);border-color:rgba(66,153,225,0.2);">News App</span>
-              <div class="proj-mcard-techs">
-                <img src="assets/flutter-svgrepo-com.svg" title="Flutter">
-                <img src="assets/code-svgrepo-com.svg" title="Dart">
+          <div class="proj-htl-body">
+            <div class="proj-htl-meta">
+              <span class="proj-htl-tag">Attendance App</span>
+              <div class="proj-htl-techs">
+                <img src="assets/node-js-svgrepo-com.svg" title="Node.js">
+                <img src="assets/sql-svgrepo-com.svg" title="MySQL">
               </div>
             </div>
-            <h3>kabarInd</h3>
-            <p>Flutter news app with live News API and responsive mobile UI.</p>
-            <a href="https://github.com/Parisz08/news-API-flutter" target="_blank" class="proj-mcard-link">
+            <h3>Hadirin</h3>
+            <p>Real-time attendance management with Node.js, MySQL and a clean REST API.</p>
+            <a href="https://github.com/Parisz08/attendance-app" target="_blank" class="proj-htl-link">
               View Project <i class="fas fa-arrow-right"></i>
             </a>
           </div>
+          <!-- connector dot bottom -->
+          <div class="proj-htl-dot proj-htl-dot--bottom"></div>
         </div>
 
-        <!-- Card 3 — SHORT -->
-        <div class="proj-mcard proj-mcard--short reveal">
-          <div class="proj-mcard-thumb" style="background: linear-gradient(145deg, #f0fff4 0%, #c6f6d5 100%);">
+        <!-- Spacer for card 02 (bottom) -->
+        <div class="proj-htl-spacer"></div>
+
+        <!-- Card 03 — TOP -->
+        <div class="proj-htl-card reveal">
+          <div class="proj-htl-thumb" style="background: linear-gradient(145deg, #f0fff4, #c6f6d5);">
             <img src="assets/koran.png" alt="Quran App">
-            <div class="proj-mcard-num">03</div>
+            <span class="proj-htl-num">03</span>
           </div>
-          <div class="proj-mcard-body">
-            <div class="proj-mcard-top">
-              <span class="proj-mcard-tag" style="color:#38a169;background:rgba(56,161,105,0.08);border-color:rgba(56,161,105,0.2);">Quran App</span>
-              <div class="proj-mcard-techs">
+          <div class="proj-htl-body">
+            <div class="proj-htl-meta">
+              <span class="proj-htl-tag" style="color:#38a169;background:rgba(56,161,105,0.08);border-color:rgba(56,161,105,0.2);">Quran App</span>
+              <div class="proj-htl-techs">
                 <img src="assets/flutter-svgrepo-com.svg" title="Flutter">
                 <img src="assets/code-svgrepo-com.svg" title="Dart">
               </div>
             </div>
             <h3>Quran-App</h3>
             <p>Flutter Quran reader with smooth chapter navigation and clean UI.</p>
-            <a href="https://github.com/Parisz08/quran-app" target="_blank" class="proj-mcard-link">
+            <a href="https://github.com/Parisz08/quran-app" target="_blank" class="proj-htl-link">
+              View Project <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+          <!-- connector dot bottom -->
+          <div class="proj-htl-dot proj-htl-dot--bottom"></div>
+        </div>
+
+      </div><!-- end top row -->
+
+      <!-- Horizontal line with 3 dots -->
+      <div class="proj-htl-line-wrap">
+        <div class="proj-htl-line">
+          <div class="proj-htl-node proj-htl-node--1"></div>
+          <div class="proj-htl-node proj-htl-node--2"></div>
+          <div class="proj-htl-node proj-htl-node--3"></div>
+        </div>
+      </div>
+
+      <!-- Bottom row: card 02 in the middle -->
+      <div class="proj-htl-bottom">
+
+        <!-- Empty left -->
+        <div class="proj-htl-spacer">
+          <!-- connector dot top -->
+          <div class="proj-htl-dot proj-htl-dot--top-spacer"></div>
+        </div>
+
+        <!-- Card 02 — BOTTOM -->
+        <div class="proj-htl-card reveal">
+          <!-- connector dot top -->
+          <div class="proj-htl-dot proj-htl-dot--top"></div>
+          <div class="proj-htl-thumb" style="background: linear-gradient(145deg, #ebf4ff, #bee3f8);">
+            <img src="assets/news.png" alt="kabarInd">
+            <span class="proj-htl-num">02</span>
+          </div>
+          <div class="proj-htl-body">
+            <div class="proj-htl-meta">
+              <span class="proj-htl-tag" style="color:#4299e1;background:rgba(66,153,225,0.08);border-color:rgba(66,153,225,0.2);">News App</span>
+              <div class="proj-htl-techs">
+                <img src="assets/flutter-svgrepo-com.svg" title="Flutter">
+                <img src="assets/code-svgrepo-com.svg" title="Dart">
+              </div>
+            </div>
+            <h3>kabarInd</h3>
+            <p>Flutter news app with live News API and responsive mobile UI.</p>
+            <a href="https://github.com/Parisz08/news-API-flutter" target="_blank" class="proj-htl-link">
               View Project <i class="fas fa-arrow-right"></i>
             </a>
           </div>
         </div>
 
-      </div><!-- end col -->
-    </div><!-- end masonry -->
+        <!-- Empty right -->
+        <div class="proj-htl-spacer"></div>
+
+      </div><!-- end bottom row -->
+
+      <!-- Mobile only: vertical timeline cards -->
+      <div class="proj-htl-mobile">
+
+        <div class="proj-htl-mobile-card">
+          <div class="proj-htl-card">
+            <div class="proj-htl-thumb" style="background: linear-gradient(145deg, #fff4ef, #ffd5c2);">
+              <img src="assets/user-check.png" alt="Hadirin">
+              <span class="proj-htl-num">01</span>
+            </div>
+            <div class="proj-htl-body">
+              <div class="proj-htl-meta">
+                <span class="proj-htl-tag">Attendance App</span>
+                <div class="proj-htl-techs">
+                  <img src="assets/node-js-svgrepo-com.svg" title="Node.js">
+                  <img src="assets/sql-svgrepo-com.svg" title="MySQL">
+                </div>
+              </div>
+              <h3>Hadirin</h3>
+              <p>Real-time attendance management with Node.js, MySQL and a clean REST API.</p>
+              <a href="https://github.com/Parisz08/attendance-app" target="_blank" class="proj-htl-link">View Project <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-htl-mobile-card">
+          <div class="proj-htl-card">
+            <div class="proj-htl-thumb" style="background: linear-gradient(145deg, #ebf4ff, #bee3f8);">
+              <img src="assets/news.png" alt="kabarInd">
+              <span class="proj-htl-num">02</span>
+            </div>
+            <div class="proj-htl-body">
+              <div class="proj-htl-meta">
+                <span class="proj-htl-tag" style="color:#4299e1;background:rgba(66,153,225,0.08);border-color:rgba(66,153,225,0.2);">News App</span>
+                <div class="proj-htl-techs">
+                  <img src="assets/flutter-svgrepo-com.svg" title="Flutter">
+                  <img src="assets/code-svgrepo-com.svg" title="Dart">
+                </div>
+              </div>
+              <h3>kabarInd</h3>
+              <p>Flutter news app with live News API and responsive mobile UI.</p>
+              <a href="https://github.com/Parisz08/news-API-flutter" target="_blank" class="proj-htl-link">View Project <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-htl-mobile-card">
+          <div class="proj-htl-card">
+            <div class="proj-htl-thumb" style="background: linear-gradient(145deg, #f0fff4, #c6f6d5);">
+              <img src="assets/koran.png" alt="Quran App">
+              <span class="proj-htl-num">03</span>
+            </div>
+            <div class="proj-htl-body">
+              <div class="proj-htl-meta">
+                <span class="proj-htl-tag" style="color:#38a169;background:rgba(56,161,105,0.08);border-color:rgba(56,161,105,0.2);">Quran App</span>
+                <div class="proj-htl-techs">
+                  <img src="assets/flutter-svgrepo-com.svg" title="Flutter">
+                  <img src="assets/code-svgrepo-com.svg" title="Dart">
+                </div>
+              </div>
+              <h3>Quran-App</h3>
+              <p>Flutter Quran reader with smooth chapter navigation and clean UI.</p>
+              <a href="https://github.com/Parisz08/quran-app" target="_blank" class="proj-htl-link">View Project <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- end mobile -->
+
+    </div><!-- end proj-htl -->
   </div>
 </section>
 
@@ -310,17 +412,11 @@
             <div class="exp-card">
               <div class="exp-card-head">
                 <div>
-                  <h3>Software Developer Program</h3>
-                  <p class="exp-place"><i class="fas fa-school"></i> IDN Boarding School Sentul</p>
+                  <h3><i class="fas fa-school"></i><span></span> Boarding School</h3>
                 </div>
-                <span class="exp-badge exp-badge--edu">2023 – Present</span>
+                <span class="exp-badge exp-badge--edu">2024 – 2027</span>
               </div>
               <p class="exp-desc">Intensive program covering web dev, mobile apps, databases, and system architecture. Real-world projects are core to the curriculum.</p>
-              <div class="exp-techs">
-                <span><img src="assets/code-svgrepo-com.svg" alt="">Web Dev</span>
-                <span><img src="assets/flutter-svgrepo-com.svg" alt="">Mobile Dev</span>
-                <span><img src="assets/sql-svgrepo-com.svg" alt="">System Design</span>
-              </div>
             </div>
           </div>
         </div>
@@ -371,40 +467,52 @@
               <div class="exp-hi-icon">
                 <img src="assets/sql-svgrepo-com.svg" alt="SQL">
               </div>
-              <div>
+              <div class="exp-hi-text">
                 <div class="exp-hi-name">SQL Intermediate</div>
                 <div class="exp-hi-sub">HackerRank</div>
               </div>
+              <a href="assets/cert-sql.pdf" target="_blank" class="cert-btn" title="View Certificate">
+                <i class="fas fa-external-link-alt"></i>
+              </a>
             </div>
 
             <div class="exp-highlight-item">
               <div class="exp-hi-icon">
                 <img src="assets/api-svgrepo-com (1).svg" alt="REST API">
               </div>
-              <div>
+              <div class="exp-hi-text">
                 <div class="exp-hi-name">Rest API</div>
                 <div class="exp-hi-sub">HackerRank</div>
               </div>
+              <a href="assets/cert-restapi.pdf" target="_blank" class="cert-btn" title="View Certificate">
+                <i class="fas fa-external-link-alt"></i>
+              </a>
             </div>
 
             <div class="exp-highlight-item">
               <div class="exp-hi-icon">
                 <img src="assets/js-svgrepo-com.svg" alt="Javascript">
               </div>
-              <div>
+              <div class="exp-hi-text">
                 <div class="exp-hi-name">Basic Javascript Back-End</div>
                 <div class="exp-hi-sub">Dicoding</div>
               </div>
+              <a href="assets/cert-js.pdf" target="_blank" class="cert-btn" title="View Certificate">
+                <i class="fas fa-external-link-alt"></i>
+              </a>
             </div>
 
             <div class="exp-highlight-item">
               <div class="exp-hi-icon">
                 <img src="assets/aws-svgrepo-com (1).svg" alt="AWS">
               </div>
-              <div>
+              <div class="exp-hi-text">
                 <div class="exp-hi-name">Basic Cloud &amp; Gen AI AWS</div>
                 <div class="exp-hi-sub">Dicoding</div>
               </div>
+              <a href="assets/cert-aws.pdf" target="_blank" class="cert-btn" title="View Certificate">
+                <i class="fas fa-external-link-alt"></i>
+              </a>
             </div>
 
           </div>
@@ -441,26 +549,38 @@
 
     <form class="contact-form reveal" id="contactForm" onsubmit="handleSubmit(event)" novalidate>
       <div class="form-field">
-        <label for="name">Your Name</label>
+        <label for="name">Your Name <span class="required-star">*</span></label>
         <input id="name" name="from_name" type="text" placeholder="John Doe" required />
+        <span class="field-hint" id="nameHint" style="display:none">
+          <i class="fas fa-exclamation-circle"></i> Please enter your name.
+        </span>
       </div>
       <div class="form-field">
-        <label for="email">Email Address</label>
+        <label for="email">Email Address <span class="required-star">*</span></label>
         <input id="email" name="from_email" type="email" placeholder="john@example.com" required />
+        <span class="field-hint" id="emailHint" style="display:none">
+          <i class="fas fa-exclamation-circle"></i> Please enter a valid email.
+        </span>
       </div>
       <div class="form-field">
-        <label for="phone">Phone Number</label>
-        <input id="phone" name="from_phone" type="tel" placeholder="+62 800 0000 0000" />
+        <label for="phone">Phone Number <span class="required-star">*</span></label>
+        <input id="phone" name="from_phone" type="tel" placeholder="+62 800 0000 0000" required />
+        <span class="field-hint" id="phoneHint" style="display:none">
+          <i class="fas fa-exclamation-circle"></i> Please enter your phone number.
+        </span>
       </div>
       <div class="form-field">
-        <label for="subject">Subject</label>
-        <input id="subject" name="subject" type="text" placeholder="Project Inquiry" />
+        <label for="subject">Subject <span class="required-star">*</span></label>
+        <input id="subject" name="subject" type="text" placeholder="Project Inquiry" required />
+        <span class="field-hint" id="subjectHint" style="display:none">
+          <i class="fas fa-exclamation-circle"></i> Please enter a subject.
+        </span>
       </div>
       <div class="form-field full">
         <label for="message">Message <span class="required-star">*</span></label>
         <textarea id="message" name="message" placeholder="Tell me about your project..." required></textarea>
         <span class="field-hint" id="messageHint" style="display:none">
-          <i class="fas fa-exclamation-circle"></i> Please write your message first.
+          <i class="fas fa-exclamation-circle"></i> Please write your message.
         </span>
       </div>
       <div class="form-submit">
